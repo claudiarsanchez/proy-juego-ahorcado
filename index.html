@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description"
+    content="Este es el juego del Ahorcado, que forma parte de un reto del programa de Alura, Principiante en programación">
+  <!-- Imagen para el título de la pestaña -->
+  <link rel="icon" type="favicon/x-icon" href="imagenes/hangman.png">
+  <!-- Enlaces a google font: letra "Nunito" -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
+  <!-- Enlaces a google font: letra "Opens Sans" -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- Titulo de la pestaña-->
+  <title>Ahorcado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="containerHeader">
+    <h1 class="titulo desplazamientoDer">Ahorcado <span><img id="rope" class="bamboleo" src="imagenes/rope.png" alt=""></span></h1>
+    <h2 class="subtitulo desplazamientoIzq">Oracle + <span>alura LATAM</span></h2>
+  </header>
+
+  <h3>... No pierdas la cabeza...</h3>
+  <section class="containerSection">
+    <!-- <h3>Ahorcado by Nahuel-DevOne</h3> -->
+    <div class="containerApp">
+      <div>
+        <ul>
+          <li><b>Para un jugador,</b> iniciar juego directamente</li>
+          <li><b>Para dos jugadores,</b> agregar palabra y luego iniciar juego</li>
+          <li>Tienes solo <b>6 oportunidades</b></li>
+        </ul>
+      </div>
+      <a href="#pantalla">
+        <button id="iniciarJuego" class="trans">INICIAR JUEGO</button>
+      </a>
+      <input type="text" id="nuevaPalabra" placeholder="Escriba una nueva palabra">
+      <button id="agregarPalabra" class="trans">AGREGAR PALABRA</button>
+    </div>
+    
+    <div id="containerCanvas">
+      <canvas class="hidden" id="pantalla" width="960px" height="450px"></canvas>
+      <!-- El boton que nos sirve para recargar la pagina y asi generar una nueva palabra y volver a jugar -->
+      <button class="hidden trans" id="reiniciarJuego" type="reset" onclick="javascript:window.location.reload();">Volver a Jugar</button>
+    </div>
+  </section>
+  <h3>...  caerás tarde o temprano </h3>
+
+
+  <footer class="containerFooter">
+    <a href="#input">
+      <h4>Ahorcado<span><img id="ropeFooter" src="imagenes/rope.png" alt=""></span></h4>
+    </a>
+    <div class="containerSocialMedia">
+      <a href="https://www.linkedin.com/in/claudia-rita-s%C3%A1nchez-9b021876/" target="_blank">
+        <img class="imgSocialMedia" src="imagenes/linkedin.svg" alt="logo de Linkedin">
+      </a>
+      <a href="https://github.com/claudiarsanchez/proy-juego-ahorcado" target="_blank">
+        <img class="imgSocialMedia" src="imagenes/github.svg" alt="logo de GitHub">
+      </a>
+    </div>
+    <div>
+      <h5>Programa ONE</h5>
+      <h5>Claudia Sánchez &copy; 2022</h5>
+    </div>
+  </footer>
+  <script type="text/javascript" src="canvas.js"></script>
+</body>
+
+</html>

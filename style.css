@@ -1,0 +1,412 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Variables globales de referencia */
+/* :root { */
+  /*Variables de colores personalizados*/
+  /* --colorGrisFuerte: #3c4146;
+  --colorGrisClarito: #ccc;
+  --colorGrisIntermedio: #a8a8a8;
+  --colorMarronGris: #484848;
+  --colorNaranjaClaro: #ffbe50;
+  --colorNaranjaFogata: rgba(255, 146, 3, 0.8);
+  --colorNaranjaFuerte:rgb(253, 103, 3);
+  --colorAzulFuerte: rgb(13, 5, 90);
+  --colorAzulClarito: #37bcf9;
+  --colorAzulPetroleo: #00538c; */
+  /*Variables de colores de Bootstrap*/
+  /* --colorDark: #212529; */
+  /* --colorLight: #f8f9fa; */
+  /* --colorSuccess: #198754;
+  --colorinfo: #0dcaf0;
+  --colorWarning: #ffc107;
+  --colorDanger: #dc3545;
+  --colorPrimary: #0d6efd;
+  --colorSecondary: #6c757d; */
+  /*colores a elegir para trabajar:*/
+  /*Variables de fuentes de letras*/
+/* } */
+
+/*Variables globales de trabajo*/
+:root{
+  --colorContainer: #f8f9fa;
+  --colorContainerCanvas: #cbcbcb;
+  --colorContainerTitulos:rgb(230, 230, 230);
+  --colortitulo: #212529;
+  --colorUno: rgb(13, 5, 90);
+  --colorDos: #00538c;
+  --colorTres: #0d6efd;
+  --colorCuatro: rgb(253, 103, 3);
+  --colorCinco: rgba(255, 146, 3, 0.8);
+  --colorSeis: #ffbe50;
+  --fuenteUno: "Nunito", sans-serif;
+  --fuenteDos: "Open Sans", sans-serif;
+}
+
+body{
+  background-color: var(--colorContainer);
+  min-width: 960px;
+}
+
+.containerHeader{
+  /* min-height: 10rem; */
+  background-color: var(--colorContainerTitulos);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 2px solid var(--colorContainerCanvas);
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+}
+
+.containerSection{
+  min-height: 20rem;
+  background-color: var(--colorContainer);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerApp{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 1rem 0rem 1rem 0rem;
+  background-color: var(--colorContainer);
+  width: 60%;
+  border-radius: 5px;
+  /* min-height: 20rem; */
+  box-shadow: 0px 0px 7px #ccc;
+}
+
+.titulo{
+  font-size: 3.25rem;
+  color: var(--colortitulo);
+  font-family: var(--fuenteUno);
+}
+
+#rope{
+  height: 12vh;
+}
+
+.subtitulo {
+  font-size: 2.5rem;
+  color: var(--colorCuatro);
+  font-family: var(--fuenteUno); 
+}
+
+.subtitulo span{
+  color: var(--colorTres);
+}
+
+h3{
+  padding: 1rem;
+  color: var(--colorUno);
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: var(--fuenteUno);
+  text-align: center;
+  background-color: var(--colorContainerTitulos);
+}
+
+h4{
+  color: var(--colortitulo);
+  margin: 0.25rem;
+  font-size: 2rem;
+  padding-top: 0.5rem;
+  font-family: var(--fuenteDos);
+}
+
+h5{
+  color: var(--colortitulo);
+  font-size: 1rem;
+  font-family: var(--fuenteDos);
+  margin: 0.25rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+
+div ul{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--colorContainer);
+  padding: 0.75rem 2rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+}
+
+li{
+  /* color: var(--colorContainerCanvas); */
+  color: var(--colortitulo);
+  font-size: 1.1rem;
+  font-family: var(--fuenteDos);
+}
+
+input{
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--colortitulo);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: var(--fuenteDos);
+  width: 70%;
+}
+
+button{
+  margin: 0.7rem;
+  padding: 1rem;
+  border-radius:5px;
+  font-size: 1rem;
+  font-family: var(--fuenteDos);
+  cursor:pointer;
+}
+
+#iniciarJuego{
+  background-color: var(--colorUno);
+  border: 2px solid var(--colorDos);
+  color: white;
+}
+
+#iniciarJuego:hover{
+  background-color: var(--colorTres);
+}
+
+#agregarPalabra{
+  background-color: var(--colorCuatro);
+  border: 2px solid var(--colorSeis);
+  color: white;
+}
+
+#agregarPalabra:hover{
+  background-color: var(--colorCinco);
+}
+
+#reiniciarJuego{
+  background-color: var(--colorUno);
+  color: var(--colorContainer);
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid black;
+}
+#reiniciarJuego:hover{ /* Estilo que se activa al pasar el puntero sobre el boton */
+  background-color: var(--colorCuatro);
+  border: 2px solid var(--colorSeis);
+}
+
+#containerCanvas{
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+canvas{
+  background-color: #cbcbcb;
+  border-radius: 5px;
+  box-shadow: 4px 0px 10px rgb(138, 138, 138);
+  cursor: pointer;
+}
+
+
+/*Clases del footer*/
+.containerFooter{
+  min-height: 8rem;
+  background-color: var(--colorContainerTitulos);
+  border-top: 2px solid var(--colorContainerCanvas);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.containerFooter a{
+  text-decoration: none;
+}
+
+.containerSocialMedia{
+  display: flex;
+}
+
+.imgSocialMedia{
+  height: 3rem;
+  margin: 1.75rem;
+  border-radius: 50%;
+  border: 1px solid var(--colortitulo);
+  padding: 0.2rem;
+}
+
+#ropeFooter{
+  height: 7vh;
+}
+
+.hidden{
+  display: none;
+}
+
+/* animaciones */
+
+/*animación para hacer bambolear la soga*/
+.bamboleo{
+  animation-name: bamboleo;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+}
+@keyframes bamboleo{
+  /* from{
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(70deg);
+  } */
+  0%{
+    transform: rotateZ(0deg);
+  }
+  10%{
+    transform: rotateZ(20deg)
+  }
+  20%{
+    transform: rotateZ(10deg)
+  }
+  30%{
+    transform: rotateZ(0deg)
+  }
+  40%{
+    transform: rotateZ(-20deg)
+  }
+  50%{
+    transform: rotateZ(-10deg)
+  }
+  60%{
+    transform: rotateZ(0deg)
+  }
+  70%{
+    transform: rotateZ(10deg)
+  }
+  80%{
+    transform: rotateZ(-10deg)
+  }
+  90%{
+    transform: rotateZ(5deg)
+  }
+  100%{
+    transform: rotateZ(0deg)
+  }
+}
+
+/* animación para desplazar el texto desde la derecha a la izquierda */
+.desplazamientoIzq{
+  animation-name: desplazamientoIzq;
+  animation-duration: 1500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+@keyframes desplazamientoIzq{
+  0%{
+    margin-left: 30vw;
+    /* transform: rotate(360deg); */
+  }
+  25%{
+    margin-left: 24vw;
+    /* transform: rotate(270deg); */
+  }
+  50%{
+    margin-left: 18vw;
+    /* transform: rotate(180deg); */
+  }
+  75%{
+    margin-left: 12vw;
+    /* transform: rotate(90deg); */
+  }
+  100%{
+    margin-left: 0vw;
+    /* transform: rotate(0deg); */
+  }
+}
+
+/* animación para desplazar el texto desde la izquierda a la derecha */
+.desplazamientoDer{
+  animation-name: desplazamientoDer;
+  animation-duration: 1500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+@keyframes desplazamientoDer{
+  0%{
+    margin-right: 30vw;
+    /* transform: rotate(360deg); */
+  }
+  25%{
+    margin-right: 24vw;
+    /* transform: rotate(270deg); */
+  }
+  50%{
+    margin-right: 18vw;
+    /* transform: rotate(180deg); */
+  }
+  75%{
+    margin-right: 12vw;
+    /* transform: rotate(90deg); */
+  }
+  100%{
+    margin-right: 0vw;
+    /* transform: rotate(0deg); */
+  }
+}
+
+/*Clase para agrandar levemente los botones*/
+/*Transición*/
+.trans {
+  transition: all 1s;
+}
+.trans:hover {
+  transform: scale(1.05);
+}
+
+/* media querys para empezar trasladar la versión del juego a mobile */
+@media(max-width: 575.98px){
+  .titulo{
+    font-size: 2.5rem;
+  }
+  .subtitulo{
+    font-size: 2rem;
+  }
+  .containerApp{
+    width: 90%;
+  }
+  h3{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  
+  h4{
+    margin: 0.25rem;
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+  }
+  
+  h5{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  input{
+    font-size: 0.75rem;
+  }
+  canvas{
+    min-height: auto;
+  }
+  .imgSocialMedia{
+    margin: 1rem;
+  }
+}
